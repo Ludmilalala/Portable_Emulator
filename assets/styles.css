@@ -1,0 +1,266 @@
+/* styles.css */
+
+/* Общие стили */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+p {
+    line-height: 1.6;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+/* Стили для заголовка */
+.header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    z-index: 1000; /* Установите z-index, чтобы она находилась выше остального контента */
+}
+.HELP_MANUAL {
+    margin-top: 20px; /* Отступ от верхней части страницы */
+}
+
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+/* Стили для боковой панели */
+.sidebar {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: none; /* Скрываем боковую панель по умолчанию */
+}
+
+.sidebar button {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+/* Стили для основного контента */
+.main-content {
+    background-color: #fff;
+    padding: 20px;
+	margin-top: 50px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sub-section {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
+}
+
+/* Стили для кнопки "Наверх" */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none; /* Скрываем кнопку "Наверх" по умолчанию */
+}
+
+.back-to-top:hover {
+    background-color: #0056b3;
+}
+
+/* Стили для адаптивного дизайна */
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+    .main-content {
+        margin-top: 20px;
+    }
+}
+.sidebar {
+    position: fixed;
+    top: 60px; /* расстояние от верха страницы */
+    left: 0;
+    width: 200px;
+    height: calc(100% - 60px); /* высота - расстояние от верха */
+    background-color: #f4f4f4;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 1000;
+    transition: left 0.3s; /* Анимация */
+    transform: translateX(-200px); /* Скрыто за левым краем */
+}
+
+.sidebar.show {
+    transform: translateX(0); /* Показываем панель, сдвигая вправо */
+}
+
+.sidebar button {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    margin-bottom: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: left;
+}
+
+.sidebar button:hover {
+    background-color: #45a049;
+}
+
+/* Стили для кнопки меню */
+.menu-button {
+    display: block;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.menu-button:hover {
+    background-color: #45a049;
+}
+
+/* Стили для основного контента */
+.main-content {
+    margin-left: 220px; /* Учитываем ширину боковой панели */
+}
+
+/* Стили для кнопки "Наверх" */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    display: none;
+}
+
+.back-to-top:hover {
+    background-color: #45a049;
+}
+
+.buttonManual {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.buttonManual:hover {
+    background-color: #45a049;
+}
+
+.buttonManual:last-child {
+    margin-right: 0; /* Чтобы у последней кнопки не было правого отступа */
+}
+
+
+/* Стили для модального окна */
+.modal {
+    display: none; /* Скрываем модальное окно по умолчанию */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); /* Прозрачный фон */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+.buttons button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+}
+
+.buttons button:hover {
+    background-color: #45a049;
+}

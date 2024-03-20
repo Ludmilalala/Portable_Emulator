@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Эмуляторы портативных устройств</title>
+    <link rel="stylesheet" type="text/css" href="assets/styles.css">
+</head>
+
+<body class="main">
+    <div class="header">
+        <div class="HELP_MANUAL">
+            <a class="buttonManual" target="_blank" href="https://github.com/Ludmilalala/Portable_Emulator">GITHUB</a>
+            <a class="buttonManual" target="_blank" href="assets/documentation.html">DOCUMENTATION</a>
+            <a class="buttonManual" href="https://github.com/Ludmilalala/Portable_Emulator/raw/main/Эмулятор%20портативных%20устройств.chm" download>Скачать CHM</a>
+			<a id="user-manual-button" class="buttonManual" target="_blank" href="assets/Руководство пользователя.html">Руководство пользователя</a>
+        </div>
+    </div>
+	
+
+    <header>
+        <h1>Эмуляторы портативных устройств: Погружение в мир ретро-игр</h1>
+        <button class="menu-button" onclick="toggleSidebar()">Меню</button>
+    </header>
+
+
+    <div class="container">
+        <div class="sidebar">
+            <button onclick="scrollToSection('introduction')">Введение</button>
+            <button onclick="scrollToSection('what-is-emulator')">Что такое эмулятор?</button>
+            <button onclick="scrollToSection('advantages')">Преимущества эмуляторов</button>
+            <button onclick="scrollToSection('what-can-emulator')">Что может эмулятор?</button>
+            <button onclick="scrollToSection('conclusion')">Заключение</button>
+        </div>
+
+        <div class="main-content">
+            <div id="introduction">
+                <h2>Введение</h2>
+                <p>Добро пожаловать на одностраничный веб-сайт, посвященный эмуляторам портативных устройств! В этой презентации мы рассмотрим, что такое эмуляторы, их преимущества, а также погрузимся в волнующий мир ретро-игр через эмуляцию популярных устройств, таких как GameBoy, PSP и Pokemon Mini.</p>
+            </div>
+
+            <div class="sub-section" id="what-is-emulator">
+                <h2>Что такое эмулятор?</h2>
+                <p>Эмулятор - это программное обеспечение, которое позволяет компьютеру воссоздавать работу другой системы. В случае с портативными устройствами, эмуляторы позволяют запускать игры и приложения, разработанные для этих устройств, на компьютере или других устройствах.</p>
+            </div>
+
+            <div class="sub-section" id="advantages">
+                <h2>Преимущества эмуляторов</h2>
+                <ul>
+                    <li><strong>Доступность:</strong> Эмуляторы позволяют наслаждаться играми с различных платформ на устройствах, которые могут быть более доступными и удобными для пользователя.</li>
+                    <li><strong>Расширенные возможности:</strong> Некоторые эмуляторы предлагают функции, которые не были доступны на оригинальных устройствах, такие как улучшенная графика, сохранение в любой момент игры и поддержка контроллеров высокой точности.</li>
+                    <li><strong>Сохранение и обмен игровыми данными:</strong> Благодаря эмуляторам, игроки могут сохранять прогресс в играх и обмениваться данными между устройствами, что позволяет синхронизировать игровой процесс на разных платформах.</li>
+                    <li><strong>Возможность игры в ретро-игры:</strong> Эмуляторы открывают доступ к богатому наследию ретро-игр, позволяя играть в классические тайтлы с устройств, которые могут быть уже недоступны или не поддерживаются.</li>
+                </ul>
+            </div>
+
+            <div class="sub-section" id="what-can-emulator">
+                <h2>Что может эмулятор?</h2>
+                <p>Эмуляторы позволяют запускать игры и приложения, разработанные для определенных портативных устройств, на различных платформах.</p>
+                <p>Некоторые из наиболее популярных эмуляторов и их поддерживаемые устройства:</p>
+                <ul>
+                    <li><strong>GameBoy Advance (GBA):</strong> VisualBoyAdvance, mGBA.</li>
+                    <li><strong>PlayStation Portable (PSP):</strong> PPSSPP.</li>
+                    <li><strong>Pokemon Mini:</strong> PokeMini.</li>
+                </ul>
+                <p>Эти эмуляторы обеспечивают широкие возможности для игры в игры с указанных устройств на вашем компьютере или мобильном устройстве.</p>
+            </div>
+
+            <div class="sub-section" id="conclusion">
+                <h2>Заключение</h2>
+                <p>Эмуляторы портативных устройств предоставляют удивительную возможность погрузиться в мир ретро-игр и насладиться классическими тайтлами на современных устройствах. Они не только сохраняют наследие игровой индустрии, но и делают его более доступным и удобным для всех нас. Попробуйте эмуляторы сегодня и откройте для себя мир ностальгии и удовольствия!</p>
+            </div>
+        </div>
+    </div>
+	
+	<footer>
+        <div class="footer-content">
+            <p>&copy; Синяева Элеонора. ПИ-20а. 2024 Эмуляторы портативных устройств. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <button class="back-to-top" onclick="scrollToTop()">Наверх</button>
+	
+	
+	
+    <script>
+    function scrollToSection(sectionId) {
+        const section = document.getElementById(sectionId);
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+
+    function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function toggleSidebar() {
+        var sidebar = document.querySelector('.sidebar');
+        sidebar.classList.toggle('show'); // Переключаем класс для отображения/скрытия боковой панели
+    }
+
+    // Скрытие/отображение кнопки "Наверх" при прокрутке страницы
+    window.onscroll = function() {
+        scrollFunction();
+    };
+
+    function scrollFunction() {
+        var backButton = document.querySelector('.back-to-top');
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            backButton.style.display = 'block';
+        } else {
+            backButton.style.display = 'none';
+        }
+    }
+	
+	
+
+    // Закрытие боковой панели при клике на ссылку
+    var sidebarButtons = document.querySelectorAll('.sidebar button');
+    sidebarButtons.forEach(function(button) {
+        button.addEventListener('click', function() {
+            document.querySelector('.sidebar').style.display = 'none';
+        });
+    });
+
+    // Открытие боковой панели при клике на кнопку меню
+    document.querySelector('.menu-button').addEventListener('click', function() {
+        document.querySelector('.sidebar').style.display = 'block';
+    });
+</script>
+
+
+</body>
+</html>

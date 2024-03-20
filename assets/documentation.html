@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation - Эмуляторы портативных устройств</title>
+    <style>
+        h1, h2, h3 {
+            color: #333;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 5px;
+        }
+
+        /* Стили для заголовка */
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        /* Стили для кнопки "Back to Home" */
+        .back-home {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        /* Стили для модулей */
+        .module {
+            margin-bottom: 20px;
+        }
+
+        .module-toggle {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-bottom: 10px;
+            display: block;
+            width: 100%;
+            text-align: left;
+        }
+
+        .module-toggle:hover {
+            background-color: #0056b3;
+        }
+
+        .module-content {
+            display: none;
+        }
+
+        .module-content.show {
+            display: block;
+        }
+    </style>
+</head>
+<body class="documentation-page">
+    <header>
+        <h1>Documentation</h1>
+        <a class="back-home" href="index.html">Вернуться назад</a>
+    </header>
+
+    <div class="documentation">
+        <div class="module">
+            <button class="module-toggle">Модуль 1 (module1)</button>
+            <div class="module-content">
+                <h2>Ветка, содержащая модули:</h2>
+                <h3>Файлы:</h3>
+                <ul>
+                    <li>Эмуляция аппаратной части - hardware_emulation.py</li>
+                    <li>Графический интерфейс пользователя - user_interface.py</li>
+                    <li>Управление настройками - settings_management.py </li>
+					<li>Совместимость с играми - game_compatibility.py </li>
+					<li>Сохранение прогресса - progress_saving.py </li>
+					<li>Интеграция с онлайн-сервисами - online_integration.py </li>
+					<li>Улучшение графиков и звука - graphics_sound_enhancement.py</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="module">
+            <button class="module-toggle">Модуль 2 (module2)</button>
+            <div class="module-content">
+                <h2>Ветка, содержащая модули :</h2>
+                <h3>Файлы :</h3>
+                <ul>
+                    <li>Поддержка дополнительных функций - additional_features.py</li>
+                    <li>Обновления и поддержка - updates_support.py</li>
+                    <li>Безопасность и конфиденциальность - security_privacy.py</li>
+					<li>Интеграция с облачными сервисами - cloud_integration.py</li>
+					<li>Геймпад-эмуляция - gamepad_emulation.py</li>
+					<li>Модуль управления эмуляцией - emulation_control.py</li>
+					<li>Поддержка мультиязычности - multilanguage_support.py </li>					
+                </ul>
+            </div>
+        </div>
+
+        <div class="module">
+            <button class="module-toggle">Модуль 3 (module3)</button>
+            <div class="module-content">
+                <h2>Ветка, содержащая модули :</h2>
+                <h3>Файлы :</h3>
+                <ul>
+                    <li>Автоматическое обновление игр - game_auto_update.py</li>
+                    <li>Поддержка сохранения и загрузки процесса игры - game_progress_management.py</li>
+                    <li>Поддержка различных форматов игровых образов - game_formats_support.py</li>
+					<li>Возможность записи игрового процесса - gameplay_recording.py</li>
+					<li>Поддержка мобильных устройств - mobile_device_support.py</li>
+					<li>Интеграция с настройками сетей - network_settings_integration.py</li>
+					<li>Расширенные настройки графики и звука - advanced_graphics_audio_settings.py</li>
+					<li>Режимы эмуляции специальных устройств - special_devices_emulation.py</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const moduleToggles = document.querySelectorAll('.module-toggle');
+
+            moduleToggles.forEach(function(toggle) {
+                toggle.addEventListener('click', function() {
+                    const content = this.nextElementSibling;
+                    content.classList.toggle('show');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
